@@ -54,7 +54,7 @@ namespace SurveyBucks.Internal.Infrastructure.SQL.Contexts
         public DbSet<Question> Questions { get; set; }
         public DbSet<QuestionType> QuestionTypes { get; set; }
         public DbSet<SurveyResponse> Responses { get; set; }
-        public DbSet<SurveyResponseChoice> ResponseChoices { get; set; }
+        public DbSet<QuestionResponseChoice> ResponseChoices { get; set; }
         public DbSet<Survey> Surveys { get; set; }
         public DbSet<SurveyParticipation> SurveyResponses { get; set; }
         public DbSet<SurveyStatus> SurveyStatuses { get; set; }

@@ -2,7 +2,7 @@
 
 namespace SurveyBucks.Internal.Domain.Contracts
 {
-    public interface ISurveyResponseRepository : IRepository<SurveyParticipation>
+    public interface ISurveyResponseRepository : IRepository<SurveyResponse>
     {
     }
 }

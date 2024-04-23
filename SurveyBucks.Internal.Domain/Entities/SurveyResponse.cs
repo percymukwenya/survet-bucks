@@ -1,5 +1,4 @@
 ﻿using SurveyBucks.Internal.Domain.Common;
-using SurveyBucks.Internal.Infrastructure.Identity.Models;
 using System;
 
 namespace SurveyBucks.Internal.Domain.Entities
@@ -15,7 +14,7 @@ namespace SurveyBucks.Internal.Domain.Entities
         public Question Question { get; set; }
 
         public SurveyResponse() : base()
-        {            
+        {
         }
 
         public SurveyResponse(string answer, int surveyParticipationId, int questionId) : this()
@@ -27,7 +26,7 @@ namespace SurveyBucks.Internal.Domain.Entities
             QuestionId = questionId;
         }
 
-        public SurveyResponse(SurveyParticipation surveyParticipation, Question question,string answer) : this()
+        public SurveyResponse(SurveyParticipation surveyParticipation, Question question, string answer) : this()
         {
             ArgumentNullException.ThrowIfNull(surveyParticipation, nameof(surveyParticipation));
             ArgumentNullException.ThrowIfNull(question, nameof(question));
@@ -37,7 +36,7 @@ namespace SurveyBucks.Internal.Domain.Entities
             SurveyParticipationId = surveyParticipation.Id;
             Question = question;
             QuestionId = question.Id;
-            Answer = answer;            
+            Answer = answer;
         }
     }
 }

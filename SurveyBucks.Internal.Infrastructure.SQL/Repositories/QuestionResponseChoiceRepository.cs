@@ -4,9 +4,9 @@ using SurveyBucks.Internal.Infrastructure.SQL.Contexts;
 
 namespace SurveyBucks.Internal.Infrastructure.SQL.Repositories
 {
-    public class ResponseChoiceRepository : Repository<SurveyResponseChoice>, ISurveyResponseChoiceRepository
+    public class QuestionResponseChoiceRepository : Repository<QuestionResponseChoice>, IQuestionResponseChoiceRepository
     {
-        public ResponseChoiceRepository(ApplicationDbContext dbContext) : base(dbContext)
+        public QuestionResponseChoiceRepository(ApplicationDbContext dbContext) : base(dbContext)
         {
         }
     }

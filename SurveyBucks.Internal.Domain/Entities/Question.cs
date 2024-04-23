@@ -16,11 +16,11 @@ namespace SurveyBucks.Internal.Domain.Entities
         public int QuestionTypeId { get; set; }
         public QuestionType QuestionType { get; set; }
 
-        public HashSet<SurveyResponseChoice> ResponseChoices { get; set; }
+        public HashSet<QuestionResponseChoice> ResponseChoices { get; set; }
 
         public Question() : base()
         {
-            ResponseChoices = new HashSet<SurveyResponseChoice>();
+            ResponseChoices = new HashSet<QuestionResponseChoice>();
         }
 
         public Question(string text, bool isMandatory, int order, int questionTypeId) : this()

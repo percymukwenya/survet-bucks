@@ -11,12 +11,12 @@ namespace SurveyBucks.Internal.Infrastructure.SQL.Repositories
         private ICompanyRepository _companyRepository;
         private IIndustryRepository _industryRepository;
         private IQuestionRepository _questionRepository;
+        private IQuestionResponseChoiceRepository _questionResponseChoiceRepository;
         private IQuestionTypeRepository _questionTypeRepository;
         private IRewardRepository _rewardRepository;
         private IRewardTypeRepository _rewardTypeRepository;
         private ISurveyParticipationRepository _surveyParticipationRepository;
-        private ISurveyRepository _surveyRepository;
-        private ISurveyResponseChoiceRepository _surveyResponseChoiceRepository;
+        private ISurveyRepository _surveyRepository;        
         private ISurveyResponseRepository _surveyResponseRepository;
         private ISurveyStatusRepository _surveyStatusRepository;
 
@@ -34,6 +34,9 @@ namespace SurveyBucks.Internal.Infrastructure.SQL.Repositories
         public IQuestionRepository QuestionRepository => 
             _questionRepository ?? new QuestionRepository(_context);
 
+        public IQuestionResponseChoiceRepository QuestionResponseChoiceRepository =>
+            _questionResponseChoiceRepository ?? new QuestionResponseChoiceRepository(_context);
+
         public IQuestionTypeRepository QuestionTypeRepository => 
             _questionTypeRepository ?? new QuestionTypeRepository(_context);
 
@@ -47,10 +50,7 @@ namespace SurveyBucks.Internal.Infrastructure.SQL.Repositories
             _surveyParticipationRepository ?? new SurveyParticipationRepository(_context);
 
         public ISurveyRepository SurveyRepository => 
-            _surveyRepository ?? new SurveyRepository(_context);
-
-        public ISurveyResponseChoiceRepository SurveyResponseChoiceRepository => 
-            _surveyResponseChoiceRepository ?? new SurveyResponseChoiceRepository(_context);
+            _surveyRepository ?? new SurveyRepository(_context);        
 
         public ISurveyResponseRepository SurveyResponseRepository => 
             _surveyResponseRepository ?? new SurveyResponseRepository(_context);

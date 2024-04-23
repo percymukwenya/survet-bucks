@@ -5,11 +5,11 @@ using SurveyBucks.Internal.Infrastructure.SQL.EntityConfigurations.Shared;
 
 namespace SurveyBucks.Internal.Infrastructure.SQL.EntityConfigurations
 {
-    public class SurveyResponseChoiceEntityConfiguration : ConcurrencyTokenEntityConfiguration<SurveyResponseChoice>, IEntityTypeConfiguration<SurveyResponseChoice>
+    public class QuestionResponseChoiceEntityConfiguration : ConcurrencyTokenEntityConfiguration<QuestionResponseChoice>, IEntityTypeConfiguration<QuestionResponseChoice>
     {
-        public void Configure(EntityTypeBuilder<SurveyResponseChoice> builder)
+        public void Configure(EntityTypeBuilder<QuestionResponseChoice> builder)
         {
-            builder.ToTable("SurveyResponseChoice", "SurveyBucks");
+            builder.ToTable("QuestionResponseChoice", "SurveyBucks");
             builder.HasKey(b => b.Id);
 
             builder.Property(b => b.Text).HasColumnName("Text").HasMaxLength(50).IsRequired();
@@ -19,7 +19,7 @@ namespace SurveyBucks.Internal.Infrastructure.SQL.EntityConfigurations
             ConfigureConcurrencyToken(builder);
 
             //Indexes
-            builder.HasIndex(b => new { b.QuestionId, b.Text }, "IX_SurveyResponseChoice_QuestionId_Text").IsUnique();
+            builder.HasIndex(b => new { b.QuestionId, b.Text }, "IX_QuestionResponseChoice_QuestionId_Text").IsUnique();
 
             //One To Many
             builder

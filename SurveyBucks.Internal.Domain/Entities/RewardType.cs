@@ -6,6 +6,7 @@ namespace SurveyBucks.Internal.Domain.Entities
     public class RewardType : ConcurrencyTokenEntity, IAuditable
     {
         public string Name { get; set; }
+        public string Description { get; set; }
 
         public RewardType() : base()
         {

@@ -3,7 +3,7 @@ using System;
 
 namespace SurveyBucks.Internal.Domain.Entities
 {
-    public class SurveyResponseChoice : ConcurrencyTokenEntity, IAuditable
+    public class QuestionResponseChoice : ConcurrencyTokenEntity, IAuditable
     {
         public string Text { get; set; }
         public int Order { get; set; }
@@ -11,11 +11,11 @@ namespace SurveyBucks.Internal.Domain.Entities
         public int QuestionId { get; set; }
         public Question Question { get; set; }
 
-        public SurveyResponseChoice() : base()
+        public QuestionResponseChoice() : base()
         {
         }
 
-        public SurveyResponseChoice(string text, int order, int questionId) : this()
+        public QuestionResponseChoice(string text, int order, int questionId) : this()
         {
             ArgumentNullException.ThrowIfNull(text, nameof(text));
 
@@ -24,7 +24,7 @@ namespace SurveyBucks.Internal.Domain.Entities
             QuestionId = questionId;
         }
 
-        public SurveyResponseChoice(Question question, string text, int order) : this()
+        public QuestionResponseChoice(Question question, string text, int order) : this()
         {
             ArgumentNullException.ThrowIfNull(text, nameof(text));
 

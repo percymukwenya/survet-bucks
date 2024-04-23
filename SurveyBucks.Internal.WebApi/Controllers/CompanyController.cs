@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SurveyBucks.Internal.Application.Models.Request;
+using SurveyBucks.Internal.Application.Models.Response;
 using SurveyBucks.Internal.Application.Services.Contract;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Threading.Tasks;
 
@@ -18,19 +20,19 @@ namespace SurveyBucks.Internal.WebApi.Controllers
         }
 
         [HttpGet("GetCompany")]
-        public async Task<ActionResult> GetCompany([FromQuery] int id)
+        public async Task<ActionResult<CompanyDetailResponse>> GetCompany([FromQuery] int id)
         {
             return Ok(await _companyService.GetCompany(id));
         }
 
         [HttpGet("GetCompanies")]
-        public async Task<ActionResult> GetCompanies()
+        public async Task<ActionResult<IReadOnlyList<CompanyListResponse>>> GetCompanies()
         {
             return Ok(await _companyService.GetCompanies());
         }
 
         [HttpPost("AddCompany")]
-        public async Task<ActionResult> AddCustomer([FromBody] AddCompanyRequest request)
+        public async Task<ActionResult> AddCompany([FromBody] AddCompanyRequest request)
         {
             await _companyService.AddCompany(request);
 

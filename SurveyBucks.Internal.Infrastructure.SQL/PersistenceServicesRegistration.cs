@@ -29,7 +29,7 @@ namespace SurveyBucks.Internal.Infrastructure.SQL
             services.AddScoped<ISurveyParticipationRepository, SurveyParticipationRepository>();
             services.AddScoped<ISurveyRepository, SurveyRepository>();
             services.AddScoped<ISurveyResponseRepository, SurveyResponseRepository>();
-            services.AddScoped<ISurveyResponseChoiceRepository, SurveyResponseChoiceRepository>();
+            services.AddScoped<IQuestionResponseChoiceRepository, QuestionResponseChoiceRepository>();
             services.AddScoped<ISurveyStatusRepository, SurveyStatusRepository>();
 
             return services;

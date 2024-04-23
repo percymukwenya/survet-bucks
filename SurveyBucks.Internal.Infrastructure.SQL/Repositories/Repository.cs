@@ -111,7 +111,7 @@ namespace SurveyBucks.Internal.Infrastructure.SQL.Repositories
             _dbContext.Set<T>().UpdateRange(entities);
         }
 
-        public void DeleteAsync(T entity)
+        public async Task DeleteAsync(T entity)
         {
             _dbContext.Set<T>().Remove(entity);
         }

@@ -1,6 +1,8 @@
-﻿using SurveyBucks.Internal.Infrastructure.Identity.Contracts;
+﻿using SurveyBucks.Internal.Application.Services.Contract;
 using SurveyBucks.Internal.Infrastructure.Identity.Models.Request;
 using SurveyBucks.Internal.Infrastructure.Identity.Models.Response;
+using System;
+using System.Threading.Tasks;
 
 namespace SurveyBucks.Internal.Application.Services
 {

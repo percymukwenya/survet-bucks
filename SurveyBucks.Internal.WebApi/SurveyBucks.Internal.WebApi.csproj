@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SurveyBucks.Internal.Application\SurveyBucks.Internal.Application.csproj" />
+    <ProjectReference Include="..\SurveyBucks.Internal.Domain\SurveyBucks.Internal.Domain.csproj" />
+    <ProjectReference Include="..\SurveyBucks.Internal.Infrastructure.SQL\SurveyBucks.Internal.Infrastructure.SQL.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -19,7 +19,7 @@ namespace SurveyBucks.Internal.Domain.Contracts
         Task CreateRangeAsync(IEnumerable<T> entities);
         Task UpdateAsync(T entity);
         Task UpdateRangeAsync(IEnumerable<T> entities);
-        void DeleteAsync(T entity);
+        Task DeleteAsync(T entity);
         Task DeleteRange(IEnumerable<T> entities);
         Task<bool> Exists(int id);
     }

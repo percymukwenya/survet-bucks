@@ -2,11 +2,14 @@
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SurveyBucks.Internal.Domain\SurveyBucks.Internal.Domain.csproj" />
     <ProjectReference Include="..\SurveyBucks.Internal.Infrastructure.Identity\SurveyBucks.Internal.Infrastructure.Identity.csproj" />
   </ItemGroup>
 

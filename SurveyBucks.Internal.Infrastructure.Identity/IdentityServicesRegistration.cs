@@ -3,7 +3,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using SurveyBucks.Internal.Infrastructure.Identity.Configurations;
-using SurveyBucks.Internal.Infrastructure.Identity.Contracts;
 using SurveyBucks.Internal.Infrastructure.Identity.DbContexts;
 using SurveyBucks.Internal.Infrastructure.Identity.Models;
 
@@ -20,8 +19,6 @@ namespace SurveyBucks.Internal.Infrastructure.Identity
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationIdentityDbContext>().AddDefaultTokenProviders();
-
-            //services.AddTransient<IAuthService, AuthService>();
 
             return services;
         }

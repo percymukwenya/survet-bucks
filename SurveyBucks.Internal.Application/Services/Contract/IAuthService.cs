@@ -2,7 +2,7 @@
 using SurveyBucks.Internal.Infrastructure.Identity.Models.Response;
 using System.Threading.Tasks;
 
-namespace SurveyBucks.Internal.Infrastructure.Identity.Contracts
+namespace SurveyBucks.Internal.Application.Services.Contract
 {
     public interface IAuthService
     {
